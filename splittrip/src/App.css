@@ -1,0 +1,162 @@
+/* src/App.css */
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header */
+.header-menu {
+  height: 60px;
+  background-color: #1e293b;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.logo-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: #475569;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 12px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Map Area */
+.map-container-wrapper {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Floating Panels - Moved down to 80px */
+.floating-panel {
+  position: absolute;
+  background: white;
+  z-index: 1000;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.left-panel {
+  top: 80px; 
+  left: 20px;
+  width: 300px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.right-panel {
+  top: 80px;
+  right: 20px;
+  width: 280px;
+}
+
+/* Search & Dropdown */
+.search-input {
+  width: 100%;
+  padding: 10px 35px 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  z-index: 2000;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* Draggable List Items */
+.stop-item {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: default;
+}
+
+.transfer-box {
+  background-color: #fef08a !important;
+  border: 1px solid #eab308 !important;
+}
+
+/* Reset for index.css if needed */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 5px 0;
+  padding: 4px;
+  background: #f1f5f9;
+  border-radius: 6px;
+}
+
+.mode-selector button {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #94a3b8;
+  border-radius: 4px;
+  display: flex;
+}
+
+.mode-selector button.active {
+  background: white;
+  color: #f97316;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}

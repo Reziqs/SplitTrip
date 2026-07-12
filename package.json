@@ -4,5 +4,8 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "leaflet-routing-machine": "^3.2.12"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
